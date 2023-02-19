@@ -114,7 +114,7 @@ async def help(message: types.Message):
     await bot.send_message(message.from_user.id, "/start - Запустить бота \n\n/vk - Поиск по ВК.\nИспользование: /vk [ссылка на ВК или ID пользователя] (Страница должна быть открыта)\n\n/tiktok - Поиск по ТикТоку\nИспользование: /tiktok [ссылка на ТикТок или ID пользователя]\n\n/youtube - Поиск по ЮТубу\nИспользование: /youtube [ссылка на ЮТуб или ID пользователя] (Для корректной работы желательно указывать ссылку вида youtube.com/channel/)\n\n/source - Исходный код бота\n\n/help - Помощь по командам")
 
 @dp.message_handler(commands = ['source'])
-async def souce(message: types.Message):
+async def source(message: types.Message):
     button = InlineKeyboardMarkup().add(InlineKeyboardButton("Ссылка на Github", url = "https://github.com/Hlebushek6/HlbshkFindBot"))
     await message.reply("Исходный код бота доступен на GitHub по ссылке ниже", reply_markup = button)
 
