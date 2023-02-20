@@ -63,7 +63,7 @@ def vksearch(id):
             found.append("партнёр")
         if "relatives" in info[0] and len(info[0]["relatives"]) != 0 and "родственники" not in found:
             found.append("родственники")
-        for i in search(info[0]["first_name"] + info[0]["last_name"], num = 5, stop = 5, pause = 2, lang = "ru"):
+        for i in search(info[0]["first_name"] + " " + info[0]["last_name"], num = 5, stop = 5, pause = 2, lang = "ru"):
             accSearch(i)
         for i in search(id, num = 5, stop = 5, pause = 2, lang = "ru"):
             accSearch(i)
